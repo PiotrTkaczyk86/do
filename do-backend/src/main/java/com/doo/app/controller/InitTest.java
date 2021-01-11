@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/test")
 public class InitTest {
 
-    @GetMapping("/")
+    @GetMapping()
     public String testMethod() {
         return "DO. application is alive";
     }
