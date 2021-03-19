@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  do-app:
+    image: doapp/doback:0.0.1-SNAPSHOT
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: doback
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+      - mysql_do
+    environment:
+      DO_HOSTNAME: mysql_do
+      DO_PORT: 3306
+      DO_DB_NAME: dodev
+      DO_USERNAME: dodev-user
+      DO_PASSWORD: dodev
+    networks:
+      - do-app-network
+
+
+  mysql_do:
+    image: mysql:8
+    container_name: dodb
+    ports:
+      - "3300:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: dodevroot
+      MYSQL_USER: dodev-user
+      MYSQL_PASSWORD: dodev
+      MYSQL_DATABASE: dodev
+    volumes:
+      - mysql-db-data:/var/lib/mysql
+    networks:
+      - do-app-network
+
+volumes:
+  mysql-db-data:
+
+networks:
+  do-app-network:
+
+
+
+
