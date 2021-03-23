@@ -18,9 +18,10 @@ services:
       DO_DB_NAME: dodev
       DO_USERNAME: dodev-user
       DO_PASSWORD: dodev
+    volumes:
+      - ./target:/app
     networks:
       - do-app-network
-
 
   mysql_do:
     image: mysql:8

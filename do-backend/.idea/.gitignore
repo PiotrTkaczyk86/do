@@ -1,6 +1,11 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
+# Custom ignored files
 target/
 .idea/
 !.gitignore
+*.properties
+docker-compose.*
+

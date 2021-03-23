@@ -12,6 +12,6 @@ public class InitTest {
 
     @GetMapping()
     public String testMethod() {
-        return "DO. application is alive. Container test. Testing also compose-up. Testing testing AG.";
+        return "DO. application is alive.";
     }
 }
