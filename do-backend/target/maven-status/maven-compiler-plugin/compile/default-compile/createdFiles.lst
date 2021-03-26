@@ -1,6 +1,0 @@
-com/doo/app/entity/Project.class
-com/doo/app/DoApplication.class
-com/doo/app/entity/Task.class
-com/doo/app/controller/InitTest.class
-com/doo/app/dao/ProjectRepository.class
-com/doo/app/configuration/RestDataConfig.class
