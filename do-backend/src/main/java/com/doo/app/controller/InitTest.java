@@ -12,6 +12,6 @@ public class InitTest {
 
     @GetMapping()
     public String testMethod() {
-        return "DO. application is alive";
+        return "DO. application is alive.";
     }
 }
