@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin("http://localhost:4200")
 @RestController
-@RequestMapping("/api/test")
+@RequestMapping("/api")
 public class InitTest {
 
-    @GetMapping()
+    @GetMapping("/test")
     public String testMethod() {
         return "DO. application is alive.";
     }
