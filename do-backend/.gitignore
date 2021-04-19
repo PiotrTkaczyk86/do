@@ -7,5 +7,6 @@ target/
 .idea/
 !.gitignore
 *.properties
+!*-test.properties
 docker-compose.*
 
