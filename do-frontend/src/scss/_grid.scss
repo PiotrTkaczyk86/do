@@ -1,41 +1,29 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 10px;
-}
-
 $grid-width: 12;
+
 @for $i from 1 through $grid-width {
     .doCol-#{$i} {
-    width: percentage($i / $grid-width);
-    }
-}
-
-.doRow {
-    max-width: $grid-width;
-    margin: 0 auto;
-
-    &:not(:last-child) {
-        padding-bottom: 1rem;
-    }
-
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-    [class^="doCol-"] {
-        float: left;
-        background-color: $do-orange;
+        flex-basis: percentage($i / $grid-width);
+        max-width: 100%;
+        flex-basis: 0;
+        flex-grow: 1;
         padding: 1rem;
-
+    }
+    .doRow {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: $grid-width;
+        margin: 0 auto;
+    
         &:not(:last-child) {
-            padding-right: 1rem;
+            padding-bottom: 1rem;
+        }
+    
+        [class^="doCol-"] {
+            background-color: $do-orange;
+            
+            &:not(:last-child) {
+                padding-right: 1rem;
+            }
         }
     }
 }
