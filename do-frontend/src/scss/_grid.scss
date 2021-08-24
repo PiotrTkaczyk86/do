@@ -1,0 +1,29 @@
+$grid-width: 12;
+
+@for $i from 1 through $grid-width {
+    .doCol-#{$i} {
+        flex-basis: percentage($i / $grid-width);
+        max-width: 100%;
+        flex-basis: 0;
+        flex-grow: 1;
+        padding: 1rem;
+    }
+    .doRow {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: $grid-width;
+        margin: 0 auto;
+    
+        &:not(:last-child) {
+            padding-bottom: 1rem;
+        }
+    
+        [class^="doCol-"] {
+            background-color: $do-orange;
+            
+            &:not(:last-child) {
+                padding-right: 1rem;
+            }
+        }
+    }
+}
