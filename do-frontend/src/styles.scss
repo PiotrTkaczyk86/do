@@ -1,19 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "scss/colors";
+@import "scss/grid";
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-$grid__cols: 12;
-  @for $i from 1 through $grid__cols {
-    .doCol-#{$i} {
-      flex-basis: (100 / ($grid__cols / $i)) * 1%;
-      max-width: 100%;
-      flex-basis: 0;
-      flex-grow: 1;
-      padding: 0 8px;
-    }
-    .doRow {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
