@@ -1,20 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 10px;
-}
-
 $grid-width: 12;
 @for $i from 1 through $grid-width {
     .doCol-#{$i} {
     min-width: percentage($i / $grid-width);
     max-width: 100%;
-    }
-    
+    } 
 }
 .doRow {
     width: 100%;
