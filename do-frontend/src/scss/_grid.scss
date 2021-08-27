@@ -9,6 +9,7 @@ $grid-width: 12;
     width: 100%;
     margin: 0 auto;
     flex-wrap: wrap;
+
     &:not(:last-child) {
         padding-bottom: 1rem;
     }
@@ -21,7 +22,6 @@ $grid-width: 12;
 
     [class^="doCol-"] {
         float: left;
-        padding: 1rem;
 
         &:not(:last-child) {
             padding-right: 1rem;
