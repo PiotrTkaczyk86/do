@@ -10,3 +10,4 @@ target/
 !*-test.properties
 docker-compose.*
 
+/.attach_pid2486
