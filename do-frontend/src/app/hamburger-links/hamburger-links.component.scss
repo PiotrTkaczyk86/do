@@ -1,0 +1,23 @@
+@import "../../styles.scss";
+
+.menu ul li {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    color: $do-white;
+    align-items: center;
+    justify-content: center;
+    background-color: $do-black;   
+    font-family: 'Titillium Web';
+    border-bottom: 1px solid $do-white;
+    a {
+        color: $do-white;
+        text-decoration: none;
+    }
+}
+.menu ul:first-child {
+    border-top: 1px solid $do-white;
+}
+.menu ul li:hover {
+    background-color: #1c1c1c;
+}
