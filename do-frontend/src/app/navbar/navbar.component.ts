@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  isOpen: boolean = false;
+
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
+    this.data.isHamburgerOpen.subscribe(hamburgerMenu => this.isOpen = hamburgerMenu);
   }
 
 }
