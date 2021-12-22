@@ -1,13 +1,29 @@
 # Default ignored files
 /shelf/
-/.idea/workspace.xml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
 
 # Custom ignored files
-target/
-.idea/
-!.gitignore
-*.properties
-!*-test.properties
-docker-compose.*
+#!.gitignore
+# *.properties
+#!*-test.properties
+#docker-compose.*
+
+
 
 /.attach_pid2486
